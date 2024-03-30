@@ -1,0 +1,7 @@
+# Extensions
+*.json
+*.egg-info
+*.pyc
+
+# Folders
+build/*
