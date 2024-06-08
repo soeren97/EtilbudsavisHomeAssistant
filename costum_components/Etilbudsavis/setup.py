@@ -7,7 +7,7 @@ SETUP_REQUIRES = [
     "setuptools",
 ]
 
-INSTALL_REQUIRES = ["requests"]
+INSTALL_REQUIRES = ["requests", "homeassistant"]
 
 EXTRAS_REQUIRE = {
     "develop": [
@@ -39,8 +39,8 @@ setup(
     license="MIT License",
     author="Søren Langkilde",
     url="",
-    packages=find_packages(where="src"),
-    package_dir={"": "src"},
+    packages=find_packages(where="./costum_components/Etinudsavis/"),
+    package_dir={"": "./costum_components/Etinudsavis/"},
     setup_requires=SETUP_REQUIRES,
     install_requires=INSTALL_REQUIRES,
     extras_require=EXTRAS_REQUIRE,

@@ -1,0 +1,11 @@
+"""Setup components for home assistant."""
+
+from typing import Any
+
+from EtilbudsavisHomeAssistant.OfferCollector import setup_service
+from homeassistant.core import HomeAssistant
+
+
+def setup(hass: HomeAssistant, config: dict[Any, Any]) -> bool:
+    """Set up the Etilbudsavis component."""
+    return setup(hass, config)

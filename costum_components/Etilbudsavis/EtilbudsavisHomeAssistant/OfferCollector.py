@@ -3,8 +3,9 @@
 from typing import Any, Optional
 
 import requests  # type:ignore
-
 from EtilbudsavisHomeAssistant.utils import load_config
+from homeassistant.core import HomeAssistant, ServiceCall
+from homeassistant.helpers.typing import ConfigType
 
 
 class OfferColloector:
@@ -100,6 +101,52 @@ class OfferColloector:
             min_price *= 1000
 
         return min_price, shop
+
+    def find_best_offers(self, items: list[list[str]]) -> list[tuple[float, str]]:
+        """Search for the best offers.
+
+        Args:
+            items (list[list[str]]): List of items and thier units.
+
+        Returns:
+            list[tuple[float, str]]: List of prices and locations of offers.
+        """
+        results = []
+        for query, unit in items:
+            self.set_query(query)
+            self.set_conditions(unit)
+            self.get_catalog_offers()
+            self.clean_offers()
+            price, shop = self.find_best_offer()
+            results.append((price, shop))
+        return results
+
+
+def handle_offer_search(hass: HomeAssistant, call: ServiceCall) -> None:
+    """Fetch offers using the offercolector class from the homeass config file.
+
+    Args:
+        hass (HomeAssistant): Home assistant object.
+        call (ServiceCall): Call to the home assistant config (maybe).
+    """
+    items = call.data.get("items", [])
+    collector = OfferColloector()
+    offers = collector.find_best_offers(items)
+    for price, shop in offers:
+        hass.states.set(f"etilbudsavis.{shop}", price)
+
+
+def setup_service(hass: HomeAssistant) -> bool:
+    """Set up the application in home assistant.
+
+    Args:
+        hass (HomeAssistant): Home assistant object.
+
+    Returns:
+        bool: Status.
+    """
+    hass.services.register("etilbudsavis", "find_best_offers", handle_offer_search)
+    return True
 
 
 if __name__ == "__main__":
