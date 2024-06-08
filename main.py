@@ -1,6 +1,6 @@
 """Main loop."""
 
-from EtilbudsavisHomeAssistance.OfferCollector import OfferColloector
+from EtilbudsavisHomeAssistant.OfferCollector import OfferColloector
 
 
 def main(items: list[list[str]]) -> None:

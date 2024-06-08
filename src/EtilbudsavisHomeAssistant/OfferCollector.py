@@ -4,7 +4,7 @@ from typing import Any, Optional
 
 import requests  # type:ignore
 
-from EtilbudsavisHomeAssistance.utils import load_config
+from EtilbudsavisHomeAssistant.utils import load_config
 
 
 class OfferColloector:
