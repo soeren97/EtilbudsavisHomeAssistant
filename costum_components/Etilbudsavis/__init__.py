@@ -6,6 +6,6 @@ from EtilbudsavisHomeAssistant.OfferCollector import setup_service
 from homeassistant.core import HomeAssistant
 
 
-def setup(hass: HomeAssistant, config: dict[Any, Any]) -> bool:
+def setup(hass: HomeAssistant) -> bool:
     """Set up the Etilbudsavis component."""
-    return setup(hass, config)
+    return setup_service(hass)  # type: ignore
