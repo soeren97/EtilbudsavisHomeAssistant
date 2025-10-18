@@ -1,0 +1,7 @@
+find_best_offers:
+  name: Find Best Offers
+  description: Search for the best prices across local stores.
+  fields:
+    items:
+      description: List of items with their units
+      example: [["mælk", "L"], ["riss", "kg"]]

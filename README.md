@@ -30,9 +30,8 @@ Ensure all dependencies are installed successfully without any errors.
 7. **Deactivate Virtual Environment (If Created):**
 `conda deactivate`
 
-8. **Create config.json.**
-Create a file containing the fields key and secret in the repocetory directory, with the two being api key and secret.
-
+## Etilbuds Avis API key and secret
+To use this integration an API key and secret is needed these can be obtained here: https://tjek.com/apis-and-sdks
 
 ### Additional Notes:
 

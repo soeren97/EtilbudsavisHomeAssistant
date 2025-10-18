@@ -1,0 +1,12 @@
+{
+    "domain": "etilbudsavis_homeassistant",
+    "name": "Etilbudsavis Integration",
+    "version": "0.1.0",
+    "documentation": "https://github.com/soeren97/EtilbudsavisHomeAssistant",
+    "requirements": ["requests"],
+    "codeowners": ["@soeren97"],
+    "iot_class": "cloud_polling",
+    "issue_tracker": "https://github.com/soeren97/EtilbudsavisHomeAssistant/issues",
+    "integration_type": "service",
+    "config_flow": true
+  }

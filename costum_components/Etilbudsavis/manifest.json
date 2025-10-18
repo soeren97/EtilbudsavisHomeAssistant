@@ -1,9 +1,0 @@
-{
-    "domain": "Etilbudsavis",
-    "name": "Etilbudsavis",
-    "version": "0.1.0",
-    "documentation": "https://github.com/soeren97/EtilbudsavisHomeAssistant",
-    "requirements": [],
-    "dependencies": [],
-    "codeowners": ["@soeren97"]
-}
