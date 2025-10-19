@@ -40,7 +40,7 @@ class LocalOffersConfigFlow(config_entries.ConfigFlow):
                 self._abort_if_unique_id_configured()
                 return self.async_create_entry(title="eTilbudsavis", data=user_input)
             else:
-                errors["base"] = "invalid_auth"
+                errors["base"] = "Authentication failed"
 
         data_schema = vol.Schema(
             {
