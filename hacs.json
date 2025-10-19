@@ -1,0 +1,10 @@
+{
+  "name": "eTilbudsavis Integration",
+  "content_in_root": false,
+  "country": ["DK"],
+  "domain": "etilbudsavis",
+  "homeassistant": "2025.4.0",
+  "iot_class": "cloud_polling",
+  "render_readme": true,
+  "filename": "manifest.json"
+}
