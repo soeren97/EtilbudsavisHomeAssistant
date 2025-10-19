@@ -19,6 +19,7 @@ class LocalOffersAPIValidator:
         self._hass = hass
 
 
+@config_entries.HANDLERS.register(DOMAIN)
 class LocalOffersConfigFlow(config_entries.ConfigFlow):
     """Handle the configuration flow for Local Store Offers."""
 
