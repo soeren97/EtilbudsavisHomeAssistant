@@ -2,7 +2,7 @@
   "name": "eTilbudsavis Integration",
   "content_in_root": false,
   "country": ["DK"],
-  "domain": "etilbudsavis",
+  "domain": "etilbudsavis_homeassistant",
   "homeassistant": "2025.4.0",
   "iot_class": "cloud_polling",
   "render_readme": true,
