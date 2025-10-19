@@ -1,5 +1,6 @@
 {
   "name": "eTilbudsavis Integration",
+  "domain": "etilbudsavis",
   "content_in_root": false,
   "country": ["DK"],
   "homeassistant": "2025.4.0"

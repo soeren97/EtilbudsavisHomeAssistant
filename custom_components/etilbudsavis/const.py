@@ -1,6 +1,6 @@
 """Constants for the Local Store Offers integration."""
 
-DOMAIN: str = "etilbuds_avis_integration"
+DOMAIN: str = "etilbudsavis"
 CONF_API_KEY: str = "api_key"
 CONF_API_SECRET: str = "api_secret"
 PLATFORMS: list[str] = ["sensor"]
